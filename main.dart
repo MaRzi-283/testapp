@@ -25,9 +25,9 @@ class _ExampleState extends State<Example> {
       javascriptMode: JavascriptMode.unrestricted,
     ),
 
-    Text(
-      'Index 1: Profilo',
-      style: optionStyle,
+    WebView(
+      initialUrl: "https://instagram.com",
+      javascriptMode: JavascriptMode.unrestricted,
     ),
   ];
 
