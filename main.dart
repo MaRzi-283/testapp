@@ -4,9 +4,9 @@ import 'package:line_icons/line_icons.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 void main() => runApp(MaterialApp(
-    title: "GNav",
+    title: "Ticket App",
     theme: ThemeData(
-      primaryColor: Colors.grey[800],
+      primaryColor: Colors.blueAccent,
     ),
     home: Example()));
 
@@ -24,12 +24,14 @@ class _ExampleState extends State<Example> {
       initialUrl: "https://google.com",
       javascriptMode: JavascriptMode.unrestricted,
     ),
-
-    WebView(
-      initialUrl: "https://instagram.com",
-      javascriptMode: JavascriptMode.unrestricted,
+    Text('Testo di prova',
+    style: TextStyle(
+      color: Colors.black87,
+      fontSize:22.0,  
+    ),
     ),
   ];
+  
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +44,7 @@ class _ExampleState extends State<Example> {
       ),
       bottomNavigationBar: Container(
         decoration: BoxDecoration(color: Colors.white, boxShadow: [
-          BoxShadow(blurRadius: 20, color: Colors.black.withOpacity(.1))
+          BoxShadow(blurRadius: 20, color: Colors.blueAccent.withOpacity(.1))
         ]),
         child: SafeArea(
           child: Padding(
@@ -53,7 +55,7 @@ class _ExampleState extends State<Example> {
                 iconSize: 24,
                 padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
                 duration: Duration(milliseconds: 800),
-                tabBackgroundColor: Colors.grey[800],
+                tabBackgroundColor: Colors.blue[800],
                 tabs: [
                   GButton(
                     icon: LineIcons.home,
@@ -61,7 +63,7 @@ class _ExampleState extends State<Example> {
                   ),
                   GButton(
                     icon: LineIcons.user,
-                    text: 'Profilo',
+                    text: 'About Us',
                   ),
                 ],
                 selectedIndex: _selectedIndex,
